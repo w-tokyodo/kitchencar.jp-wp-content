@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+// image
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// list
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+// clear
+.cf:before,.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}

@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+// color
+$color-text: #444;
+$color-link: #444;
+
+$color-primary: #AF0B0C;
+$color-primary--light: #3dd0c9;
+$color-secondary: #b9aa56;
+$color-thread: #e2e2e2;
+
+
+// layout
+$width : 900px;
+
+// font size
+$fs-ll: 30px;
+$fs-l: 21px;
+$fs-m: 18px;
+$fs-s: 14px;
+$fs-xs: 11px;
+
+//mixin
+
+
+@mixin inner {
+	width: $width;
+	margin: auto;
+	padding: 30px 0 50px;
+}
+
+@mixin title {
+	text-align: center;
+	margin: 30px 0 20px;
+}
+
+//
+
+
+// link
+a {
+	text-decoration: none;
+	color: $color-link;
+	&:hover {
+		text-decoration: none;
+	}
+	img {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+// table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

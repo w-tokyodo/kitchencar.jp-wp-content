@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+.frontCopyright {
+	background: $color-primary;
+	&__inner {
+		@include inner;
+		padding: 10px 0;
+		color: #FFF;
+		font-size: $fs-xs;
+		text-align: center;
+	}
+}

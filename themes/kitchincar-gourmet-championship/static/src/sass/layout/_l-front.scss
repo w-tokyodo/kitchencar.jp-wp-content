@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+.frontHeader {
+	background: url(/assets/img/bg.jpg);
+	background-position: center top ;
+	&__inner {
+		@include inner;
+		padding-top: 100px;
+	}
+	&__visual {
+		margin-bottom: 50px;
+	}
+}
+
+
+.frontBlog {
+	&__inner {
+		@include inner;
+	}
+	&__title {
+		@include title;
+	}
+}
+
+.frontShop {
+	&__inner {
+		@include inner;
+	}
+	&__title {
+		@include title;
+	}
+}
+
+
+.col-3 {
+	@extend .cf;
+	&__item {
+		width: 31.333%;
+		float: left;
+		padding: 1%;
+		img {
+			width: 100%;
+		}
+	}
+	a {
+		display: block;
+	}
+	&__img {
+
+	}
+	&__date {
+		font-size: $fs-xs;
+		color: $color-primary;
+		font-weight: bold;
+		margin-top: 5px;
+	}
+	&__title {
+		font-size: $fs-s;
+		font-weight: bold;
+		margin-top: 3px;
+	}
+}
+
+.frontEvent {
+	background: url(/assets/img/bg-green.jpg);
+	&__inner {
+		@include inner;
+	}
+	&__title {
+		@include title;
+	}
+	&__content {
+
+	}
+	&__map {
+		text-align: center;
+	}
+}
+
+.frontContact {
+	background: url(/assets/img/bg-paper.jpg);
+	background-repeat: repeat;
+	&__inner {
+		@include inner;
+		width: 500px;
+	}
+	&__title {
+		@include title;
+	}
+	&__list {
+		
+	}
+	&__item {
+		
+	}
+}
+
+.frontSponsor {
+	&__inner {
+		@include inner;
+	}
+	&__title {
+		@include title;
+	}
+	&__list {
+	}
+	&__item {
+		display: block;
+		text-align: center;
+		img {
+			height: 100px;
+			width: auto;
+		}
+	}
+}
+
+.frontSpecial {
+	background: #FFBC22;
+	color: #FFF;
+	&__inner {
+		@include inner;
+		padding: 10px 0;
+		@extend .cf;
+		p {
+			float: left;
+			margin-top: 15px;
+			margin-left: 50px;
+			font-size: $fs-l;
+			font-weight: bold;
+		}
+		img {
+			width: 100px;
+			margin-right: 50px;
+			float: right;
+		}
+	}
+}
+
+.moreButton {
+	text-align: center;
+}
