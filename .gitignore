@@ -1,4 +1,4 @@
-# Numerous always-ignore extensions
+ # Numerous always-ignore extensions
 *.diff
 *.err
 *.orig
@@ -16,6 +16,8 @@
 *.out
 *.pid
 *.gz
+*.mo
+*.po
 
 # OS or Editor folders
 .DS_Store
