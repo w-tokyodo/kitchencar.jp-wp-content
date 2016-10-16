@@ -1,1 +1,41 @@
 @charset 'utf-8';
+
+a.btn{
+	display: block;
+	width: 200px;
+	margin: 45px auto;
+	padding: 15px 0;
+	font-weight: bold;
+	border: 2px solid $color-primary;
+	background: transparent;
+	color: $color-primary;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1;
+	transition: .3s;
+	position:relative;
+	z-index:2;
+	overflow:hidden;
+	&::after {
+		display:block;
+		content:"";
+		position:absolute;
+		z-index:-1;
+		top:50%;
+		left:50%;
+		width:0;
+		height:0;
+		margin:0;
+		border-radius:50%;
+		background:$color-primary;
+		transition: 0.6s;
+	}
+	&:hover {
+		color:#fff;
+	}
+	&:hover::after {
+		width:300px;
+		height:300px;
+		margin:-150px 0 0 -150px;
+	}
+}
