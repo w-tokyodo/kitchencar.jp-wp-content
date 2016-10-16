@@ -33,7 +33,6 @@ function kitchincar_gourmet_championship_setup() {
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
 	 */
-	add_theme_support( 'title-tag' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -102,7 +101,6 @@ add_action( 'widgets_init', 'kitchincar_gourmet_championship_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kitchincar_gourmet_championship_scripts() {
-	wp_enqueue_style( 'kitchincar-gourmet-championship-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'kitchincar-gourmet-championship-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
