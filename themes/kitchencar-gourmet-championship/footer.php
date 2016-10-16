@@ -12,8 +12,8 @@
 ?>
 
 		<div class="frontSpecial">
-			<div class="frontSpecial__inner"><a href="http://foodear.jp">
-					<div class="frontSpecial__image"><img src="/assets/img/logo-foodear.png" alt=""></div>
+			<div class="frontSpecial__inner"><a href="http://foodear.jp" target="_blank">
+					<div class="frontSpecial__image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/logo-foodear.png" alt=""></div>
 					<div class="frontSpecial__text">foodearはキッチンカーグルメ選手権とキッチンカーを愛するすべての人を応援します!!</div></a></div>
 		</div>
 		<div class="frontCopyright">
