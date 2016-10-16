@@ -3,12 +3,52 @@
 .frontHeader {
 	background: url(/assets/img/bg.jpg);
 	background-position: center top ;
+	background-repeat: repeat;
 	&__inner {
 		@include inner;
-		padding-top: 100px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 	&__visual {
-		margin-bottom: 50px;
+		text-align: center;
+	}
+}
+
+.frontNews {
+	&__inner {
+		@include inner;
+		@extend .cf;
+	}
+	&__headline {
+		@include headline;
+	}
+	&__list {
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0 0  30px;
+	}
+	&__item {
+		margin-bottom: 10px;
+		&__date {
+			display: inline-block;
+			font-size: $fs-s;
+			font-weight: bold;
+		}
+		&__title {
+			display: inline-block;
+			text-decoration: underline;
+			font-size: $fs-m;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	a {
+		display: block;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -17,8 +57,8 @@
 	&__inner {
 		@include inner;
 	}
-	&__title {
-		@include title;
+	&__headline {
+		@include headline;
 	}
 }
 
@@ -26,8 +66,8 @@
 	&__inner {
 		@include inner;
 	}
-	&__title {
-		@include title;
+	&__headline {
+		@include headline;
 	}
 }
 
@@ -54,7 +94,7 @@
 		font-weight: bold;
 		margin-top: 5px;
 	}
-	&__title {
+	&__headline {
 		font-size: $fs-s;
 		font-weight: bold;
 		margin-top: 3px;
@@ -66,8 +106,8 @@
 	&__inner {
 		@include inner;
 	}
-	&__title {
-		@include title;
+	&__headline {
+		@include headline;
 	}
 	&__content {
 
@@ -84,8 +124,8 @@
 		@include inner;
 		width: 500px;
 	}
-	&__title {
-		@include title;
+	&__headline {
+		@include headline;
 	}
 	&__list {
 		
@@ -99,8 +139,8 @@
 	&__inner {
 		@include inner;
 	}
-	&__title {
-		@include title;
+	&__headline {
+		@include headline;
 	}
 	&__list {
 	}
