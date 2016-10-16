@@ -164,66 +164,36 @@
 }
 
 .frontSpecial {
-	background: #FFBC22;
+	background: $color-foodear;
 	color: #FFF;
+	display: block;
+	&:hover {
+		background: darken($color-foodear,3);
+	}
 	&__inner {
-		@include inner;
 		padding: 10px 0;
 		@extend .cf;
-		p {
-			float: left;
-			margin-top: 15px;
-			margin-left: 50px;
-			font-size: $fs-l;
-			font-weight: bold;
-		}
+	}
+	a {
+		color: #FFF;
+		display: block;
 		img {
-			width: 100px;
-			margin-right: 50px;
-			float: right;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			text-decoration: underline;
+			opacity: 0.8;
 		}
 	}
-}
-
-.moreButton {
-	text-align: center;
-}
-a.btn{
-	display: block;
-	width: 200px;
-	margin: 45px auto;
-	padding: 15px 0;
-	font-weight: bold;
-	border: 2px solid $color-primary;
-	background: transparent;
-	color: $color-primary;
-	text-align: center;
-	text-decoration: none;
-	line-height: 1;
-	transition: .3s;
-	position:relative;
-	z-index:2;
-	overflow:hidden;
-	&::after {
-		display:block;
-		content:"";
-		position:absolute;
-		z-index:-1;
-		top:50%;
-		left:50%;
-		width:0;
-		height:0;
-		margin:0;
-		border-radius:50%;
-		background:$color-primary;
-		transition:.3s;
+	&__text {
+		margin: 15px auto;
+		font-size: $fs-s;
+		text-align: center;
 	}
-	&:hover {
-		color:#fff;
-	}
-	&:hover::after {
-		width:300px;
-		height:300px;
-		margin:-150px 0 0 -150px;
+	&__image {
+		width: 100px;
+		margin: auto;
 	}
 }
