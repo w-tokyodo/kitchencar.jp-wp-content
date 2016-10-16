@@ -11,18 +11,16 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kitchincar-gourmet-championship' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kitchincar-gourmet-championship' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kitchincar-gourmet-championship' ), 'kitchincar-gourmet-championship', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
+		<div class="frontSpecial">
+			<div class="frontSpecial__inner"><a href="http://foodear.jp">
+					<div class="frontSpecial__image"><img src="/assets/img/logo-foodear.png" alt=""></div>
+					<div class="frontSpecial__text">foodearはキッチンカーグルメ選手権とキッチンカーを愛するすべての人を応援します!!</div></a></div>
+		</div>
+		<div class="frontCopyright">
+			<div class="frontCopyright__inner">
+				<p>Copyright (C) 2016 キッチンカースタジアムグルメ選手権. All Rights Reserved.</p>
+			</div>
+		</div>
+		<?php wp_footer(); ?>
+	</body>
 </html>
