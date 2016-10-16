@@ -21,24 +21,33 @@
 	}
 	&__headline {
 		@include headline;
+		float: left;
+		text-align: left;
+		margin-right: 50px;
 	}
 	&__list {
 		float: left;
 		list-style: none;
 		margin: 0;
 		padding: 0 0  30px;
+		width: 700px;
 	}
 	&__item {
 		margin-bottom: 10px;
+		@extend .cf;
+		line-height: 1.5;
 		&__date {
-			display: inline-block;
+			display: block;
 			font-size: $fs-s;
 			font-weight: bold;
+			float: left;
+			padding-top: 3px;
 		}
 		&__title {
-			display: inline-block;
+			display: block;
 			text-decoration: underline;
 			font-size: $fs-m;
+			padding-left: 140px;
 			&:hover {
 				text-decoration: none;
 			}
@@ -178,4 +187,43 @@
 
 .moreButton {
 	text-align: center;
+}
+a.btn{
+	display: block;
+	width: 200px;
+	margin: 45px auto;
+	padding: 15px 0;
+	font-weight: bold;
+	border: 2px solid $color-primary;
+	background: transparent;
+	color: $color-primary;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1;
+	transition: .3s;
+	position:relative;
+	z-index:2;
+	overflow:hidden;
+	&::after {
+		display:block;
+		content:"";
+		position:absolute;
+		z-index:-1;
+		top:50%;
+		left:50%;
+		width:0;
+		height:0;
+		margin:0;
+		border-radius:50%;
+		background:$color-primary;
+		transition:.3s;
+	}
+	&:hover {
+		color:#fff;
+	}
+	&:hover::after {
+		width:300px;
+		height:300px;
+		margin:-150px 0 0 -150px;
+	}
 }
