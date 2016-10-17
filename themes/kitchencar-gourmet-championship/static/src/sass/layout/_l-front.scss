@@ -126,43 +126,6 @@
 	}
 }
 
-.frontContact {
-	background: url(../img/bg-paper.jpg);
-	background-repeat: repeat;
-	&__inner {
-		@include inner;
-		width: 500px;
-	}
-	&__headline {
-		@include headline;
-	}
-	&__list {
-		
-	}
-	&__item {
-		
-	}
-}
-
-.frontSponsor {
-	&__inner {
-		@include inner;
-	}
-	&__headline {
-		@include headline;
-	}
-	&__list {
-	}
-	&__item {
-		display: block;
-		text-align: center;
-		img {
-			max-height: 100px;
-			width: auto;
-		}
-	}
-}
-
 .frontSpecial {
 	background: $color-foodear;
 	color: #FFF;
@@ -171,7 +134,7 @@
 		background: darken($color-foodear,3);
 	}
 	&__inner {
-		padding: 10px 0;
+		padding: 20px 0 10px;
 		@extend .cf;
 	}
 	a {

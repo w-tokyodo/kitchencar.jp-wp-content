@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+.frontSponsor {
+	&__inner {
+		@include inner;
+	}
+	&__headline {
+		@include headline;
+	}
+	&__list {
+		display: -webkit-flex; /* Safari */
+		display: flex;
+		-webkit-justify-content: center; /* Safari */
+		justify-content:         center;
+	}
+	&__item {
+		display: block;
+		text-align: center;
+		padding: 10px 25px;
+		img {
+			max-height: 100px;
+			width: auto;
+		}
+	}
+}
