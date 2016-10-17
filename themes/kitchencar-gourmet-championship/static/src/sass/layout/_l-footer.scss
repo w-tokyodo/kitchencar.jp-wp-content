@@ -10,3 +10,64 @@
 		text-align: center;
 	}
 }
+
+
+.frontSpecial {
+	background: $color-foodear;
+	color: #FFF;
+	display: block;
+	&__inner {
+		padding: 10px 0;
+		@extend .cf;
+	}
+	a {
+		color: #FFF;
+		display: block;
+		img {
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			text-decoration: underline;
+			opacity: 0.8;
+		}
+	}
+	&__text {
+		margin: 10px auto;
+		font-size: $fs-s;
+		text-align: center;
+	}
+	&__image {
+	}
+	&__col-2 {
+		width: 42%;
+		padding: 0 4%;
+		&--left {
+			@extend .frontSpecial__col-2;
+			float: left;
+			text-align: right;
+			margin-top: 35px;
+			a {
+				float: right;
+				display: block;
+				text-align: center;
+			}
+		}
+		&--right {
+			@extend .frontSpecial__col-2;
+			float: right;
+			text-align: left;
+			a {
+				float: left;
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+	&__message {
+		text-align: center;
+		font-size: $fs-s;
+		margin-bottom: 10px;
+	}
+}

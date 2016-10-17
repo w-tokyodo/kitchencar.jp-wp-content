@@ -109,38 +109,3 @@
 		margin-top: 3px;
 	}
 }
-
-.frontSpecial {
-	background: $color-foodear;
-	color: #FFF;
-	display: block;
-	&:hover {
-		background: darken($color-foodear,3);
-	}
-	&__inner {
-		padding: 20px 0 10px;
-		@extend .cf;
-	}
-	a {
-		color: #FFF;
-		display: block;
-		img {
-			&:hover {
-				opacity: 1;
-			}
-		}
-		&:hover {
-			text-decoration: underline;
-			opacity: 0.8;
-		}
-	}
-	&__text {
-		margin: 15px auto;
-		font-size: $fs-s;
-		text-align: center;
-	}
-	&__image {
-		width: 100px;
-		margin: auto;
-	}
-}
