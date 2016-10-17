@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+.frontEvent {
+	background: url(../img/bg-green.jpg);
+	&__inner {
+		@include inner;
+	}
+	&__headline {
+		@include headline;
+	}
+	&__content {
+
+	}
+	&__title {
+		display: inline;
+		float: left;
+		width: 100px;
+		font-size: $fs-s;
+		-webkit-border-radius: 3px;
+		        border-radius: 3px;
+		background: $color-primary;
+		color: #FFF;
+		text-align: center;
+		padding: 3px 0;
+	}
+	&__description {
+		display: block;
+		padding-left: 120px;
+		padding-bottom: 20px;
+		padding-top: 1px;
+		margin-left: 0;
+		a {
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__map {
+		text-align: center;
+	}
+}

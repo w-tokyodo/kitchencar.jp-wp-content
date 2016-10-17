@@ -110,22 +110,6 @@
 	}
 }
 
-.frontEvent {
-	background: url(../img/bg-green.jpg);
-	&__inner {
-		@include inner;
-	}
-	&__headline {
-		@include headline;
-	}
-	&__content {
-
-	}
-	&__map {
-		text-align: center;
-	}
-}
-
 .frontSpecial {
 	background: $color-foodear;
 	color: #FFF;
