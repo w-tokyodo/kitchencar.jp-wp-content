@@ -36,8 +36,8 @@ get_header(); ?>
 
 </div>
 
-		<?php get_template_part("template-parts/content","contact"); ?>
-		<?php get_template_part("template-parts/content","sponsor"); ?>
+		<!-- <?php get_template_part("template-parts/content","contact"); ?> -->
+		<!-- <?php get_template_part("template-parts/content","sponsor"); ?> -->
 
 <?php
 get_footer();
