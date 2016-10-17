@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+.frontContact {
+	background: url(../img/bg-paper.jpg);
+	background-repeat: repeat;
+	&__inner {
+		@include inner;
+		width: 600px;
+	}
+	&__headline {
+		@include headline;
+	}
+	&__title {
+		display: inline;
+		float: left;
+		width: 100px;
+		font-size: $fs-s;
+		-webkit-border-radius: 3px;
+		        border-radius: 3px;
+		background: $color-primary;
+		color: #FFF;
+		text-align: center;
+		padding: 3px 0;
+	}
+	&__description {
+		display: block;
+		padding-left: 120px;
+		padding-bottom: 20px;
+		padding-top: 1px;
+		margin-left: 0;
+		a {
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
