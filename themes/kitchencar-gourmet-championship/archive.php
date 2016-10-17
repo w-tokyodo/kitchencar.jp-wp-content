@@ -9,43 +9,38 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="content-header">
+	<div class="content-header__image">
+		<a href="<?php echo esc_url(home_url( '/' )); ?>">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/single-header.png" >
+		</a>
+	</div>
+</div>
 
-		<?php
-		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+<div class="archive-area">
+	<div class="archive-area__headline">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_news.png" alt="">
+	</div>
+	<ul class="archive-area__list">
+	<?php while(have_posts()): the_post(); ?>
+		<li class="archive-area__item">
+			<a href="<?php the_permalink(); ?>">
+				<div class="archive-area__date">
+					<?php the_time("Y.m.d" ); ?>
+				</div>
+				<div class="archive-area__title">
+					<?php the_title(); ?>
+				</div>
+			</a>
+		</li>
+	<?php endwhile; ?>
+	</ul>
+	<div class="nav-link">
+		<?php posts_nav_link(); ?>
+	</div>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</div>
 
 <?php
-get_sidebar();
 get_footer();

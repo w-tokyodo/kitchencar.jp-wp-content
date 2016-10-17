@@ -5,13 +5,13 @@
 						<?php $loop = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5 ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<li class="frontNews__item">
 										<a href="<?php the_permalink(); ?>">
-												<div class="frontNews__item__date"><?php the_time('Y年m月d日'); ?></div>
+												<div class="frontNews__item__date"><?php the_time('Y.m.d'); ?></div>
 												<div class="frontNews__item__title"><?php the_title(); ?></div>
 										</a>
 								</li>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 						</ul>
-						<!-- <a href="#" class="btn">もっと見る</a> -->
+						<a href="<?php echo esc_url(home_url('/news')); ?>" class="btn">もっと見る</a>
 				</div>
 		</div>
