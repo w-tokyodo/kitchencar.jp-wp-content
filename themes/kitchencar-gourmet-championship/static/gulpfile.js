@@ -30,25 +30,34 @@ gulp.task('jade', function() {
 
 
 gulp.task('sass', function () {
-    return gulp
-        .src('src/sass/*.scss')
-        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(glob())
-        .pipe(sass())
-        .pipe(ap())
-        .pipe(cssmin())
-        .pipe(gulp.dest('assets/css'));
+		return gulp
+				.src('src/sass/*.scss')
+				.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+				.pipe(glob())
+				.pipe(sass())
+				.pipe(ap())
+				.pipe(cssmin())
+				.pipe(gulp.dest('assets/css'));
 });
 
 // browser
 gulp.task("browser-sync", function () {
-    browser({
-        proxy: "http://127.0.0.1:8080"
-    });
+		browser({
+				server: {
+					baseDir: "./",
+					index: "index.html"
+				}
+		});
+});
+
+gulp.task("browser-sync-wp", function () {
+		browser({
+				proxy: "http://127.0.0.1:8080/"
+		});
 });
 
 gulp.task("bs-reload", function () {
-    browser.reload();
+		browser.reload();
 });
 
 
@@ -70,9 +79,22 @@ gulp.task("watch",["browser-sync"], function() {
 		gulp.watch("src/img/*.{png,jpg,gif,svg}",["imagemin","bs-reload"]);
 	});
 
+gulp.task("wp-watch",["browser-sync-wp"], function() {
+		gulp.watch("src/sass/**/*.scss",["sass","bs-reload"]);
+		gulp.watch("*.php", ["bs-reload"]);
+		gulp.watch("assets/css/*.css", ["bs-reload"]);
+		gulp.watch("src/js/**/*.js",["js","bs-reload"]);
+		gulp.watch("assets/js/**/*.js",["js","bs-reload"]);
+		gulp.watch("src/img/*.{png,jpg,gif,svg}",["imagemin","bs-reload"]);
+	});
+
+
+
+
 // build
 gulp.task("build",["sass","imagemin","jade","js"]);
+gulp.task("wp",["sass","imagemin","js","wp-watch"]);
 
 gulp.task('default', ['sass', 'imagemin','jade','js','watch'], function() {
-  console.log('done');
+	console.log('done');
 });
