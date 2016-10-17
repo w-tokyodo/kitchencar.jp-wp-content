@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="content-header">
 	<div class="content-header__image">
-		<a href="<?php echo esc_url(home_url( '/' )); ?>">
+		<a href="<?php echo esc_url(home_url( '/2016' )); ?>">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/single-header.png" >
 		</a>
 	</div>
@@ -37,7 +37,9 @@ get_header(); ?>
 	<?php endwhile; ?>
 	</ul>
 	<div class="nav-link">
-		<?php posts_nav_link(); ?>
+		<div class="nav-link__left"><?php previous_posts_link( '&laquo; 最新の記事' ); ?></div>
+		<div class="nav-link__right"><?php next_posts_link( '過去の記事&raquo;', '' ); ?></div>
+		</div>
 	</div>
 
 </div>
