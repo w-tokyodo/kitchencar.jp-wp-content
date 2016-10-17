@@ -4,9 +4,12 @@
 	background: url(../img/news-bg.jpg);
 	background-position: center top ;
 	background-repeat: repeat-x;
-	
+	background-color: $color-primary;
+	padding-top: 10px;
 	&__image {
 		text-align: center;
+		width: 150px;
+		margin: auto;
 	}
 }
 
