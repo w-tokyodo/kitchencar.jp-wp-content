@@ -30,10 +30,10 @@ get_header(); ?>
 			</header>
 			<div class="entry-content">
 				<?php the_content(); ?>
-				<?php wp_link_pages(); ?>
 			</div>
 		</article>
 	<?php endwhile; ?>
+
 </div>
 
 		<?php get_template_part("template-parts/content","contact"); ?>
