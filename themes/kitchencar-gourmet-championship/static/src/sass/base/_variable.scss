@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // color
-$color-text: #444;
+$color-text: #666;
 $color-link: #444;
 
 $color-primary: #AF0B0C;
@@ -13,14 +13,23 @@ $color-foodear: #FFBC22;
 
 
 // layout
-$width : 900px;
+$width : 800px;
 
 // font size
+$fs-xl: 38px;
 $fs-ll: 30px;
 $fs-l: 21px;
-$fs-m: 18px;
+$fs-m: 17px;
 $fs-s: 14px;
 $fs-xs: 11px;
+
+// font family
+
+$ff-primary : Hiragino Sans,"ヒラギノ角ゴシック","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meriyo,sans-serif;
+
+body {
+	font-family: $ff-primary;
+}
 
 //mixin
 
@@ -52,6 +61,8 @@ a {
 		}
 	}
 }
+
+
 
 // table
 table {

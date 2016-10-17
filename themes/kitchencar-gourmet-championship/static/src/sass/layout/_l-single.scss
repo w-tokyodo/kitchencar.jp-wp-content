@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+.content-header {
+	background: url(../img/news-bg.jpg);
+	background-position: center top ;
+	background-repeat: repeat-x;
+	
+	&__image {
+		text-align: center;
+	}
+}
+
+.content-area {
+	@include inner;
+	padding-top: 30px;
+	color: $color-text;
+}
+.entry- {
+	&title {
+		font-size: $fs-xl;
+		font-weight: bold;
+		margin-bottom: 40px;
+		margin-top: 20px;
+		letter-spacing: 0px;
+	}
+	&date {
+		font-weight: bold;
+	}
+	&content {
+		font-size: $fs-m;
+		min-height: 300px;
+	}
+}
