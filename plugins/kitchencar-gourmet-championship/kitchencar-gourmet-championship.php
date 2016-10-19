@@ -19,7 +19,7 @@ function kgc_add_ga_codes() {
 	if ( $uids && ! is_user_logged_in() ) {
 		$code = "\tga('create', '%s', 'auto');";
 		$eocode = "\tga('send', 'pageview');";
-		wp_enqueue_script( 'ga', trailingslashit( KGC_URI ) . 'js/ga.js', [], '', true );
+		wp_enqueue_script( 'ga', trailingslashit( KGC_URI ) . 'js/ga.js', [], '', false );
 		foreach ( $uids as $uid ) {
 			wp_add_inline_script( 'ga', sprintf( $code, $uid ) );
 		}
