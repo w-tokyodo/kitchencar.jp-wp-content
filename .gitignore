@@ -18,6 +18,8 @@
 *.gz
 *.mo
 *.po
+/plugins
+/uploads
 
 # OS or Editor folders
 .DS_Store
