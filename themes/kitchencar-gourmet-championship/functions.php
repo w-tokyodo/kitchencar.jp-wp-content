@@ -63,6 +63,8 @@ function kitchincar_gourmet_championship_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	add_theme_support( 'title-tag' );
 }
 endif;
 add_action( 'after_setup_theme', 'kitchincar_gourmet_championship_setup' );
