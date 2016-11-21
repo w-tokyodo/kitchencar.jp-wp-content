@@ -51,3 +51,7 @@ pids
 logs
 results
 build
+
+/index.php
+/plugins/index.php
+/themes/index.php
