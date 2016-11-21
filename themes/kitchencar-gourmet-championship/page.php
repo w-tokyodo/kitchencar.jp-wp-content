@@ -37,7 +37,6 @@ get_header(); ?>
 	<?php endwhile; ?>
 </div>
 
-		<?php get_template_part("template-parts/content","news"); ?>
 		<?php get_template_part("template-parts/content","event"); ?>
 		<?php // get_template_part("template-parts/content","contact"); ?>
 		<?php // get_template_part("template-parts/content","sponsor"); ?>
