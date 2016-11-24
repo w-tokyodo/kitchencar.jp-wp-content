@@ -7,7 +7,7 @@ add_action( 'init', function() {
 			'label' => 'キッチンカー',
 			'public' => true,
             'has_archive' => true,
-			'supports' => [ 'title', 'editor', 'custom-fields', 'thumbnail' ]
+			'supports' => [ 'title', 'editor', 'author', 'custom-fields', 'thumbnail' ]
 		]
 	);
 	register_post_type(
