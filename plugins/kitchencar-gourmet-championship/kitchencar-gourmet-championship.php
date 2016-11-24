@@ -10,6 +10,7 @@
 
 define( 'KGC_PATH', __DIR__ );
 define( 'KGC_URI',  plugins_url( '', __FILE__ ) );
+define( 'KGC_INC', KGC_PATH . '/inc' );
 
 /**
  * Google Analytics
@@ -27,3 +28,5 @@ function kgc_add_ga_codes() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kgc_add_ga_codes' );
+
+require_once KGC_INC . '/repositories.php';

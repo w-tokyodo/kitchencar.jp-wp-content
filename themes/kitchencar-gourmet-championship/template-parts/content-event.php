@@ -5,7 +5,7 @@
 							<dt class="frontEvent__title">開催日時</dt>
 							<dd class="frontEvent__description">2016年12月4日 10:00~16:00 <small>（投票は15時まで） 雨天決行・荒天中止</small></dd>
 							<dt class="frontEvent__title">開催場所</dt>
-							<dd class="frontEvent__description">埼玉スタジアム2002 公園 北広場</dd>
+							<dd class="frontEvent__description">埼玉スタジアム2002 公園 南広場</dd>
 							<dt class="frontEvent__title">入場料</dt>
 							<dd class="frontEvent__description">無料</dd>
 							<dt class="frontEvent__title">主　催</dt>
@@ -13,6 +13,7 @@
 							<dd class="frontEvent__description">株式会社ワークストア・トウキョウドゥ</dd>
 							<dt class="frontEvent__title">協　力</dt>
 							<dd class="frontEvent__description">浦和レッドダイヤモンズ</dd>
+							<dd class="frontEvent__description">浦和レッズ後援会</dd>
 							<dd class="frontEvent__description">ＴＳＰ太陽株式会社</dd>
 						</dl>
 						<div class="frontEvent__content">
