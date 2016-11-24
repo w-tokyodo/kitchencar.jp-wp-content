@@ -36,20 +36,20 @@ function kgc2016_menu_page() {
 }
 
 function kgc2016_entry_list_add_rewrite_endpoint() {
-    add_rewrite_endpoint( 'entry-raw', EP_ROOT );
+    add_rewrite_endpoint( 'entry-list-0', EP_ROOT );
 }
 
 function kgc2016_entry_list_query_vars( $vars ) {
-    $vars[] = 'entry-raw';
+    $vars[] = 'entry-list-0';
     return $vars;
 }
 
 function kgc2016_entry_list_template_redirect() {
     global $wp_query;
-    if ( ! isset( $wp_query->query['entry-raw'] ) ) {
+    if ( ! isset( $wp_query->query['entry-list-0'] ) ) {
         return;
     }
-    $id = $wp_query->query['entry-raw'];
+    $id = $wp_query->query['entry-list-0'];
     get_header();
 ?>
     <div class="content-header">
