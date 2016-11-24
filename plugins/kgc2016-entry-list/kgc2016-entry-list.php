@@ -67,19 +67,21 @@ function kgc2016_entry_list_template_redirect() {
 
 function kgc2016_entry_list_render_table() {
     $exp = kgc2016_entry_list_get_form();
+    $reExp = [];
+    while ( $row = $exp->nextRow() ) {
+        array_unshift( $reExp, $row );
+    }
 ?>
         <table style="font-size:.75em;">
             <thead>
                 <tr>
-                    <th>Shop Name</th>
-                    <th>Genre</th>
-                    <th>Menu</th>
-                    <th>Car Image</th>
-                    <th>Menu Image</th>
+                    <th>キッチンカー名</th>
+                    <th>自慢の一品</th>
+                    <th>説明</th>
                 </tr>
             </thead>
             <tbody>
-                <?php while ( $row = $exp->nextRow() ) { kgc2016_entry_list_render_row( $row ); } ?>
+                <?php foreach ( $reExp as $reRow ) { kgc2016_entry_list_render_row( $reRow ); } ?>
             </tbody>
         </table>
 <?php
@@ -88,11 +90,9 @@ function kgc2016_entry_list_render_table() {
 function kgc2016_entry_list_render_row( Array $row ) {
 ?>
                 <tr>
-                    <td><h3><?= esc_html( $row['your-shop-name'] ) ?></h3></td>
-                    <td><?= esc_html( $row['your-genre'] ) ?></td>
-                    <td><?= esc_html( $row['your-menu'] ) ?> / <?= esc_html( $row['your-price'] ) ?> 円</td>
-                    <td><img src="<?= esc_attr( $row['file-car_URL'] ) ?>" style="width:250px;height:auto;"></td>
-                    <td><img src="<?= esc_attr( $row['file-menu_URL'] ) ?>" style="width:250px;height:auto;"></td>
+                    <td><h3><small><?= esc_html( $row['your-copy'] ) ?></small><br /><?= esc_html( $row['your-shop-name'] ) ?></h3></td>
+                    <td><small>( <?= esc_html( $row['your-genre'] ) ?> )</small> <?= esc_html( $row['your-menu'] ) ?> <small>( <?= esc_html( $row['your-price'] ) ?> 円 )</small></td>
+                    <td><?= esc_html( $row['your-content'] ) ?></td>
                 </tr>
 <?php
 }
