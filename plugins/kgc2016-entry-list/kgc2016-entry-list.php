@@ -84,6 +84,7 @@ function kgc2016_entry_list_render_table() {
         <table style="font-size:.75em;">
             <thead>
                 <tr>
+                    <?php if ( current_user_can( 'administrator' ) ) { ?><th>No.</th><?php } ?>
                     <th>キッチンカー名</th>
                     <th>自慢の一品</th>
                     <th>説明</th>
@@ -98,8 +99,10 @@ function kgc2016_entry_list_render_table() {
 }
 
 function kgc2016_entry_list_render_row( Array $row ) {
+    static $i = 0;
 ?>
                 <tr>
+                    <?php if ( current_user_can( 'administrator' ) ) { ?><td><?= ++$i ?></td><?php } ?>
                     <td><h3><small><?= esc_html( $row['your-copy'] ) ?></small><br><?= kgc2016_entry_list_render_shop_name( $row['your-shop-name'], $row['submit_time'] ) ?></h3></td>
                     <td><?= esc_html( $row['your-menu'] ) ?><br><small>( <?= esc_html( $row['your-price'] ) ?> 円 )</small></td>
                     <td><small>&lt;<?= esc_html( $row['your-genre'] ) ?>&gt;</small> <?= esc_html( $row['your-content'] ) ?></td>
@@ -108,13 +111,16 @@ function kgc2016_entry_list_render_row( Array $row ) {
 }
 
 function kgc2016_entry_list_render_shop_name( $name, $id ) {
-    if ( ! is_user_logged_in() ) {
+    if ( ! current_user_can( 'administrator' ) ) {
         return esc_html( $name );
     }
     return sprintf( '<a href="%s">%s</a>', esc_attr( $id ), esc_html( $name ) );
 }
 
 function kgc2016_entry_list_render_single( $submit_time ) {
+    if ( ! current_user_can( 'administrator' ) ) {
+        return;
+    }
     $exp = kgc2016_entry_list_get_form();
     while ( $row = $exp->nextRow() ) {
         if ( $row['submit_time'] === $submit_time ) {
