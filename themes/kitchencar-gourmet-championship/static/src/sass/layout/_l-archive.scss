@@ -3,15 +3,24 @@
 .archive-area {
 	@include inner;
 	padding-bottom: 20px;
+	@media screen and (max-width:800px) {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 10px;
+	}
 	&__headline {
 		@include headline;
 	}
 	&__list {
-		
 	}
 	&__item {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
 		padding: 20px 0;
 		border-bottom: 1px solid #efefef;
+		max-width: 100%;
 		@extend .cf;
 		&:first-child {
 			border-top: 1px solid #efefef;
@@ -22,10 +31,17 @@
 		color: $color-text;
 		font-size: $fs-s;
 		padding-top: 3px;
+		@media screen and (max-width:800px) {
+			float: none;
+			padding: 0;
+		}
 	}
 	&__title {
 		padding-left: 135px;
 		font-size: $fs-m;
+		@media screen and (max-width:800px) {
+			padding: 0;
+		}
 	}
 	a {
 		display: block;

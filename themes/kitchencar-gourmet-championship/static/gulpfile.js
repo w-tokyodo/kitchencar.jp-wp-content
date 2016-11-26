@@ -43,10 +43,7 @@ gulp.task('sass', function () {
 // browser
 gulp.task("browser-sync", function () {
 		browser({
-				server: {
-					baseDir: "./",
-					index: "index.html"
-				}
+			proxy: "http://127.0.0.1:8080"
 		});
 });
 

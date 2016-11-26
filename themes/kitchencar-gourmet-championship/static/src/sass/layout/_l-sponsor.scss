@@ -12,11 +12,33 @@
 		display: flex;
 		-webkit-justify-content: center; /* Safari */
 		justify-content:         center;
+		@media screen and (max-width:800px) {
+			display: block;
+			*zoom: 1;
+			&:before {
+				content: " ";
+				display: table;
+			}
+			&:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+		}
 	}
 	&__item {
 		display: block;
 		text-align: center;
 		padding: 10px 25px;
+		@media screen and (max-width:800px) {
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			width: 50%;
+			padding: 0;
+			float: left;
+			height: 80px;
+		}
 		img {
 			max-height: 100px;
 			width: auto;
