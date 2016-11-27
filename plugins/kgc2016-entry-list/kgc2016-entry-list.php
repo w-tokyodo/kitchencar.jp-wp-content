@@ -15,8 +15,8 @@ function init_kgc2016_entry_list() {
         new KGC2016EntryListAdmin();
     }
     else {
-        require_once 'KGC2016EntryList0.php';
-        new KGC2016EntryList0();
+        require_once 'KGC2016EntryListView_0.php';
+        new KGC2016EntryListView_0();
     }
 }
 
