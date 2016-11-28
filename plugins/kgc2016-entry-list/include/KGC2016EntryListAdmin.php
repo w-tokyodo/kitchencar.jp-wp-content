@@ -15,7 +15,6 @@ class KGC2016EntryListAdmin {
     }
 
     public function menu_page() {
-        require_once 'KGC2016EntryList.php';
         $this->list = new KGC2016EntryList();
 
         if ( 'view' === filter_input( INPUT_GET, 'action' ) ) {
@@ -48,7 +47,6 @@ class KGC2016EntryListAdmin {
     }
 
     private function list_table() {
-        require_once 'KGC2016EntryListTable.php';
         $table = new KGC2016EntryListTable();
         $table->set_list_array( $this->list->get() );
         $table->prepare_items();

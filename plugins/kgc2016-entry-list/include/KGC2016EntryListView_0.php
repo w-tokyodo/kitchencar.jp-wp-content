@@ -7,12 +7,11 @@ class KGC2016EntryListView_0 {
     private $submit_time = '';
 
     public function __construct() {
-        add_action( 'init', [ $this, 'add_rewrite_endpoint' ] );
         add_filter( 'query_vars', [ $this, 'query_vars' ] );
         add_action( 'template_redirect', [ $this, 'template_redirect' ] );
     }
 
-    public function add_rewrite_endpoint() {
+    public static function init() {
         add_rewrite_endpoint( self::EP, EP_ROOT );
     }
 
@@ -32,8 +31,6 @@ class KGC2016EntryListView_0 {
 
     private function render() {
         $this->_pre_render();
-
-        require_once 'KGC2016EntryList.php';
         $list = new KGC2016EntryList();
 
         get_header();

@@ -29,16 +29,15 @@ class KGC2016EntryList {
     }
 
     private function get_array( $arg ) {
+        $cache = [];
         $array = [];
-        if ( $arg === 'asc' ) {
-            while ( $row = $this->formDB->nextRow() ) {
-                array_unshift( $array, $row );
+        $func = $arg === 'asc' ? 'array_unshift' : 'array_push';
+        while ( $row = $this->formDB->nextRow() ) {
+            if ( isset( $cache[$row['your-shop-name']] ) && $row['your-menu'] === $cache[$row['your-shop-name']] ) {
+                continue;
             }
-        }
-        else {
-            while ( $row = $this->formDB->nextRow() ) {
-                $array[] = $row;
-            }
+            $func( $array, $row );
+            $cache[$row['your-shop-name']] = $row['your-menu'];
         }
         return $array;
     }

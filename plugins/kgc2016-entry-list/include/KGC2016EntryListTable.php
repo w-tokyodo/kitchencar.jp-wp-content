@@ -17,7 +17,9 @@ class KGC2016EntryListTable extends WP_List_Table {
         $columns = [
             'cb' => '<input type="checkbox" />',
             'your-shop-name' => 'Shop',
-            'your-genre' => 'Genre'
+            'your-genre' => 'Genre',
+            'your-menu' => 'Menu',
+            'Submitted' => 'Date'
         ];
         return $columns;
     }
