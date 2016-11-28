@@ -7,11 +7,14 @@ class KGC2016EntryListView_0 {
     private $submit_time = '';
 
     public function __construct() {
-        add_filter( 'query_vars', [ $this, 'query_vars' ] );
-        add_action( 'template_redirect', [ $this, 'template_redirect' ] );
+        add_action( 'init', [ $this, 'init' ] );
+        if ( ! is_admin() ) {
+            add_filter( 'query_vars', [ $this, 'query_vars' ] );
+            add_action( 'template_redirect', [ $this, 'template_redirect' ] );
+        }
     }
 
-    public static function init() {
+    public function init() {
         add_rewrite_endpoint( self::EP, EP_ROOT );
     }
 

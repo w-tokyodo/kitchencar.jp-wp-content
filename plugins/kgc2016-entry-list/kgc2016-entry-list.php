@@ -10,28 +10,17 @@ function init_kgc2016_entry_list() {
     if ( ! isset( $CF7DBPlugin_minimalRequiredPhpVersion ) ) {
         return;
     }
-    spl_autoload_register( '_kgc2016_entry_list_autoload' );
-    add_action( 'init', 'KGC2016EntryListView_0::init' );
-    if ( is_admin() ) {
-        new KGC2016EntryListAdmin();
-    }
-    else {
-        new KGC2016EntryListView_0();
-    }
+    spl_autoload_register( function ( $class ) {
+        $filename = trailingslashit( __DIR__ . '/include' ) . $class . '.php';
+        if ( file_exists( $filename ) ) {
+            require $filename;
+        }
+    } );
+
+    new KGC2016EntryListView_0();
+    new KGC2016EntryListAdmin();
 }
 
-function _kgc2016_entry_list_autoload( $class ) {
-    $filename = trailingslashit( __DIR__ . '/include' ) . $class . '.php';
-    if ( file_exists( $filename ) ) {
-        require $filename;
-    }
-}
-
-/**
- * @param array $args {
- *     @type string
- * }
- */
 function kgc2016_entry_list_render_single( Array $args ) {
 ?>
     <div class="content-area">

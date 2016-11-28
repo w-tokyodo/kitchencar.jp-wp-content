@@ -29,14 +29,23 @@ class KGC2016EntryList {
     }
 
     private function get_array( $arg ) {
+        /**
+         * 重複入力チェック用配列
+         */
         $cache = [];
         $array = [];
         $func = $arg === 'asc' ? 'array_unshift' : 'array_push';
         while ( $row = $this->formDB->nextRow() ) {
+            /**
+             * 重複チェック
+             */
             if ( isset( $cache[$row['your-shop-name']] ) && $row['your-menu'] === $cache[$row['your-shop-name']] ) {
                 continue;
             }
             $func( $array, $row );
+            /**
+             * 店名キーにメニュー値
+             */
             $cache[$row['your-shop-name']] = $row['your-menu'];
         }
         return $array;
