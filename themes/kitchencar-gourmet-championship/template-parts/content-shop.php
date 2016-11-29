@@ -1,9 +1,17 @@
 <div class="frontShop">
 		<div class="frontShop__inner">
 				<div class="frontShop__headline"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt=""></div>
+				<div class="frontShop__info">
+					全国から
+					<span class="frontShop__info__number">
+					<?php $numposts = $wpdb->get_var("SELECT count(*) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'kgc_shop'"); if (0 < $numposts) $numposts = number_format($numposts); echo  $numposts ;?>
+					</span>
+					店舗が集結!!
+				</div>
+
 				<div class="frontShop__inner col-3">
 
-				<?php $loop = new WP_Query( array('post_type' => 'kgc_shop', 'posts_per_page' => 6 ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php $loop = new WP_Query( array('post_type' => 'kgc_shop', 'posts_per_page' => 6 ,'orderby' => 'rand' ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 						<div class="col-3__item frontShop__item">
 								<a href="<?php the_permalink(); ?>">
@@ -24,7 +32,6 @@
 									<div class="col-3__title frontShop__copy"><?php echo SCF::get('shop-copy'); ?></div>
 								</a>
 						</div>
-
 
 				<?php endwhile; ?> 
 				<?php wp_reset_postdata(); ?>
