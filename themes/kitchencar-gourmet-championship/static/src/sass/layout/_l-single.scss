@@ -15,7 +15,10 @@
 
 .content-area {
 	@include inner;
-	padding-top: 30px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-top: 30px 10px 50px;
 	color: $color-text;
 }
 .entry- {
@@ -29,7 +32,7 @@
 			-webkit-box-sizing: border-box;
 			   -moz-box-sizing: border-box;
 			        box-sizing: border-box;
-		padding: 0 10px;
+		padding: 0 ;
 		font-size: $fs-ll;
 		line-height: 1.2;
 		margin: 0;

@@ -35,9 +35,16 @@ body {
 
 
 @mixin inner {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: $width;
+	max-width: 100%;
 	margin: auto;
 	padding: 30px 0 50px;
+	@media screen and (max-width:480px) {
+		padding: 30px 10px 50px;
+	}
 }
 
 @mixin headline {
