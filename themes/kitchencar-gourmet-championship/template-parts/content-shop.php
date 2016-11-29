@@ -28,7 +28,16 @@
 								</a>
 								<div class="col-3__title frontShop__cat"><?php echo get_the_term_list($post->ID, 'kgc_shop_cat'); ?></div>
 								<a href="<?php the_permalink(); ?>">
-									<div class="col-3__title frontShop__title"><?php the_title(); ?></div>
+									<div class="col-3__title frontShop__title">
+										<?php
+										if(mb_strlen($post->post_title, 'UTF-8')>14){
+											$title= mb_substr($post->post_title, 0, 14, 'UTF-8');
+											echo $title.'…';
+										}else{
+											echo $post->post_title;
+										}
+										?>
+									</div>
 									<div class="col-3__title frontShop__copy"><?php echo SCF::get('shop-copy'); ?></div>
 								</a>
 						</div>

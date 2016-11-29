@@ -22,6 +22,13 @@ get_header(); ?>
 	<div class="archive-area__headline">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt="">
 	</div>
+	<div class="frontShop__info">
+		全国から
+		<span class="frontShop__info__number">
+		<?php $numposts = $wpdb->get_var("SELECT count(*) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'kgc_shop'"); if (0 < $numposts) $numposts = number_format($numposts); echo  $numposts ;?>
+		</span>
+		店舗が集結!!
+	</div>
 	<div class="frontShop__inner col-3">
 	<?php while(have_posts()): the_post(); ?>
 		<div class="col-3__item frontShop__item">
@@ -39,7 +46,16 @@ get_header(); ?>
 				</a>
 				<div class="col-3__title frontShop__cat"><?php echo get_the_term_list($post->ID, 'kgc_shop_cat'); ?></div>
 				<a href="<?php the_permalink(); ?>">
-					<div class="col-3__title frontShop__title"><?php the_title(); ?></div>
+					<div class="col-3__title frontShop__title">
+						<?php
+						if(mb_strlen($post->post_title, 'UTF-8')>14){
+							$title= mb_substr($post->post_title, 0, 14, 'UTF-8');
+							echo $title.'…';
+						}else{
+							echo $post->post_title;
+						}
+						?>
+					</div>
 					<div class="col-3__title frontShop__copy"><?php echo SCF::get('shop-copy'); ?></div>
 				</a>
 		</div>
