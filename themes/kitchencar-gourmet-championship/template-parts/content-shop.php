@@ -3,7 +3,7 @@
 				<div class="frontShop__headline"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt=""></div>
 				<div class="frontShop__inner col-3">
 
-				<?php $loop = new WP_Query( array('post_type' => 'kgc_shop', 'posts_per_page' => 3 ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php $loop = new WP_Query( array('post_type' => 'kgc_shop', 'posts_per_page' => 6 ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 						<div class="col-3__item frontShop__item">
 								<a href="<?php the_permalink(); ?>">
