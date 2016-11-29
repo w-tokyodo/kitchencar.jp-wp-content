@@ -138,3 +138,61 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+
+add_action('init', 'register_shop_custom_post');
+function register_shop_custom_post() {
+    register_post_type(
+        'kgc_shop', array(
+            'label' => '出店情報',
+            'description' => '',
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'menu_icon' => 'dashicons-carrot',
+            'menu_position' => 5,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'rewrite' => true,
+            'query_var' => true,
+            'has_archive' => true,
+            'supports' => array('title','thumbnail','editor'),
+            'taxonomies' => array('release_cat'),
+            'labels' => array(
+                'name' => '出店情報',
+                'singular_name' => '出店情報',
+                'menu_name' => '出店情報',
+                'add_new' => '新規追加',
+                'add_new_item' => '出店情報の新規追加',
+                'edit' => '編集',
+                'edit_item' => '出店情報の編集',
+                'new_item' => '新しい出店情報',
+                'view' => '表示',
+                'view_item' => '出店情報の出店情報',
+                'search_items' => '出店情報の検索',
+                'not_found' => '見つかりません',
+                'not_found_in_trash' => 'ゴミ箱にはありません。',
+                'parent' => '親',
+            )
+        )
+    );
+    register_taxonomy(
+        'kgc_shop_cat',
+        'kgc_shop',
+        array(
+            'hierarchical' => true,
+            'label' => '出店カテゴリー',
+            'show_ui' => true,
+            'query_var' => true,
+            'rewrite' => true,
+            'singular_label' => '出店カテゴリー'
+        )
+    );
+}
+
+add_image_size( 'kgc_thumbnail', 231, 117, true );
+add_image_size( 'kgc_thumbnail_post', 400, 400, true );
+add_image_size( 'kgc_thumbnail_car', 100, 100, true );
