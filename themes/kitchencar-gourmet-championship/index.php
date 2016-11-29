@@ -18,10 +18,10 @@ get_header(); ?>
 						<div class="frontHeader__visual"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-visual.png" alt=""></div>
 				</div>
 		</div>
+		<!--<?php get_template_part("template-parts/content","shop"); ?> -->
 		<?php get_template_part("template-parts/content","news"); ?>
 		<?php get_template_part("template-parts/content","event"); ?>
-		<!-- <?php get_template_part("template-parts/content","shop"); ?> -->
-		<!-- <?php get_template_part("template-parts/content","contact"); ?> -->
+		<!--<?php get_template_part("template-parts/content","shop"); ?> -->
 		 <?php get_template_part("template-parts/content","sponsor"); ?>
 <?php
 //get_sidebar();
