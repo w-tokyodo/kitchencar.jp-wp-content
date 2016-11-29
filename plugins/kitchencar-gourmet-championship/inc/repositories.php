@@ -14,7 +14,8 @@ add_action( 'init', function() {
 		'kgc_entry',
 		[
 			'label' => '選手権エントリー',
-			'public' => true
+			'public' => true,
+			'supports' => [ 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ]
 		]
 	);
 	register_taxonomy(
