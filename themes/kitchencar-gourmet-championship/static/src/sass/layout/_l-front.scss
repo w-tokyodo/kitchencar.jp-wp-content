@@ -141,7 +141,17 @@
 		height: 50px;
 		display: inline-block;
 	}
-
+	&__info {
+		font-family: "Sawarabi Mincho";
+		text-align: center;
+		font-size: $fs-s;
+		color: $color-text;
+		&__number {
+			font-size: $fs-xl;
+			font-weight: bold;
+			color: $color-primary;
+		}
+	}
 }
 
 

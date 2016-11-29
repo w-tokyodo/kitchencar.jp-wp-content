@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/css/app.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
