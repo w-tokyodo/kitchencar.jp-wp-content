@@ -12,6 +12,7 @@
 		display: flex;
 		-webkit-justify-content: center; /* Safari */
 		justify-content:         center;
+		height: auto;
 		@media screen and (max-width:800px) {
 			display: block;
 			*zoom: 1;
@@ -27,9 +28,9 @@
 		}
 	}
 	&__item {
-		display: block;
-		text-align: center;
 		padding: 10px 25px;
+		position: relative;
+		width: 80px;
 		@media screen and (max-width:800px) {
 			-webkit-box-sizing: border-box;
 			   -moz-box-sizing: border-box;
@@ -38,10 +39,17 @@
 			padding: 0;
 			float: left;
 			height: 80px;
+			
 		}
 		img {
-			max-height: 100px;
-			width: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 80px;
+			max-height: 150px;
 		}
 	}
 }
