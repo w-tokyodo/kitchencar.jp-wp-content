@@ -1,0 +1,27 @@
+@charset 'utf-8';
+.cat-list {
+	@extend .cf;
+	margin: 0;
+}
+
+.cat-item {
+	display: inline-block;
+	line-height: 1;
+	a {
+		color: #FFF !important;
+		padding: 5px 10px;
+		font-size: $fs-xs;
+		background: $color-text;
+		-webkit-border-radius: 10px;
+		        border-radius: 10px;
+		&:hover {
+			text-decoration: none !important;
+			background: $color-primary;
+		}
+	}
+}
+.current-cat {
+	a {
+		background: $color-primary;
+	}
+}

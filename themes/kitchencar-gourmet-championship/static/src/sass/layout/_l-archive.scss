@@ -50,6 +50,17 @@
 			text-decoration: underline;
 		}
 	}
+	&__cat {
+		text-align: center;
+		background: $color-primary;
+		padding: 10px 20px;
+		display: block;
+		color: #FFF;
+		-webkit-border-radius: 10px;
+		        border-radius: 10px;
+		width: 350px;
+		margin: 20px auto;
+	}
 }
 
 .nav-link {
