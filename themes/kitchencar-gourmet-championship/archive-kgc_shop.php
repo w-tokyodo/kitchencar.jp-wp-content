@@ -37,9 +37,9 @@ get_header(); ?>
 						<?php if ( has_post_thumbnail()): ?>
 							<?php the_post_thumbnail('kgc_thumbnail'); ?>
 						<?php else: ?>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/thumbnail.jpg" alt="">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/thumbnail.jpg" alt="<?php the_title(); ?>">
 						<?php endif; ?>
-						<div class="forntShop__car">
+						<div class="frontShop__car">
 							<?php $image = get_post_meta($post->ID, 'shop-image', true); echo wp_get_attachment_image($image, 'kgc_thumbnail_car');?>
 						</div>
 					</div>
