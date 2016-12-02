@@ -37,13 +37,10 @@ get_header(); ?>
 					<?php echo SCF::get('shop-content'); ?>
 				</div>
 				<div class="entry-fields__menu">
-				<?php if ( $p_player_group = SCF::get( 'shop-menu-item' ) ) { 	?>
-				<?php foreach ( (array) $p_player_group as $field_name => $field_value ) { 	?>
 					<dl>
-						<td><?php echo esc_html( $field_value['shop-menu-item'] ); ?></td>
-						<td><?php echo esc_html( $field_value['shop-menu-price'] ); ?>円</td>
+						<td><?php if ( $shop_menu_item = SCF::get( 'shop-menu-item' ) ) {  echo esc_html( $shop_menu_item ); } ?></td>
+						<td><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円'; } ?></td>
 					</dl>
-				<?php } ?>
 				<?php } ?>
 				</div>
 			</div>
