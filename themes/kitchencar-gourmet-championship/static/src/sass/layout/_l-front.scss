@@ -106,7 +106,7 @@
 		font-size: $fs-m;
 		margin-bottom: 5px;
 		&:hover {
-			text-decoration: underline;
+			text-decoration: none !important;
 		}
 	}
 	&__cat {
@@ -157,6 +157,7 @@
 
 .col-3 {
 	@extend .cf;
+	padding-bottom: 0;
 	div {
 	}
 	&__item {

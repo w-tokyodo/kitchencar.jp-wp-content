@@ -38,3 +38,11 @@ div {
 .frontNews,.frontEvent {
 	padding: 0 10px;
 }
+
+
+// link
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
