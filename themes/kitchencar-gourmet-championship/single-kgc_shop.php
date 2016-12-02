@@ -44,7 +44,7 @@ get_header(); ?>
 					<?php endif; ?>
 					<?php if(post_custom('shop-menu-price')): ?>
 						<dt>価格</dt>
-						<dd><?php echo SCF::get('shop-menu-price'); ?></dd>
+						<dd><?php echo SCF::get('shop-menu-price'); ?>円</dd>
 					<?php endif; ?>
 					</dl>
 				</div>
