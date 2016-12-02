@@ -122,7 +122,7 @@
 		}
 	}
 	&__copy {
-		font-size: $fs-s;
+		font-size: $fs-xs;
 		color: #666;
 	}
 	&__thumb {
@@ -166,6 +166,8 @@
 		width: 33.333%;
 		float: left;
 		padding: 10px;
+		overflow: hidden;
+		height: 250px;
 		@media screen and (max-width:480px) {
 			width: 100%;
 			float: none;
