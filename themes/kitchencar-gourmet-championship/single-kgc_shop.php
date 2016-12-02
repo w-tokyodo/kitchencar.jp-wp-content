@@ -37,7 +37,7 @@ get_header(); ?>
 					<?php echo SCF::get('shop-content'); ?>
 				</div>
 				<div class="entry-fields__menu">
-				<?php $p_player_group = SCF::get( 'shop-menu' ); foreach ( $p_player_group as $field_name => $field_value ) { 	?>
+				<?php $p_player_group = SCF::get( 'shop-menu-item' ); foreach ( $p_player_group as $field_name => $field_value ) { 	?>
 					<dl>
 						<td><?php echo esc_html( $field_value['shop-menu-item'] ); ?></td>
 						<td><?php echo esc_html( $field_value['shop-menu-price'] ); ?>円</td>
