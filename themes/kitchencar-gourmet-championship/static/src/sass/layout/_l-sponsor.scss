@@ -3,6 +3,7 @@
 .frontSponsor {
 	&__inner {
 		@include inner;
+		padding-bottom: 20px;
 	}
 	&__headline {
 		@include headline;
@@ -12,7 +13,7 @@
 		display: flex;
 		-webkit-justify-content: center; /* Safari */
 		justify-content:         center;
-		height: auto;
+		height: 80px;
 		@media screen and (max-width:800px) {
 			display: block;
 			*zoom: 1;
