@@ -39,7 +39,7 @@ get_header(); ?>
 				<div class="entry-fields__menu">
 					<dl>
 						<td><?php if ( $shop_menu_item = SCF::get( 'shop-menu-item' ) ) {  echo esc_html( $shop_menu_item ); } ?></td>
-						<td><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円'; } ?></td>
+						<td><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円' ); } ?></td>
 					</dl>
 				<?php } ?>
 				</div>
