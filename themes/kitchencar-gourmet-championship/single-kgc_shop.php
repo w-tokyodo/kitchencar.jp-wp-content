@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="content-header">
 	<div class="content-header__image">
-		<a href="http://kitchencar.jp/">
+		<a href="/">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/single-header.png" >
 		</a>
 	</div>
@@ -21,6 +21,9 @@ get_header(); ?>
 	<?php while(have_posts()): the_post(); ?>
 		<article id="post-<?php the_ID(); ?> kgc_shop" <?php post_class(); ?>>
 			<header class="entry-header">
+				<div class="entry-fields__thumbnail">
+					<?php the_post_thumbnail('kgc_thumbnail_post'); ?>
+				</div>
 				<h1 class="entry-title">
 					<?php the_title(); ?>
 				</h1>
