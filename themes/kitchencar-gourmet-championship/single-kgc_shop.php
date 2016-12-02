@@ -38,10 +38,14 @@ get_header(); ?>
 				</div>
 				<div class="entry-fields__menu">
 					<dl>
+					<?php if(post_custom('shop-menu-item')): ?>
 						<dt>自慢の一品</dt>
-						<dd><?php if ( $shop_menu_item = SCF::get( 'shop-menu-item' ) ) {  echo esc_html( $shop_menu_item ); } ?></dd>
+						<dd><?php echo SCF::get('shop-menu-item'); ?></dd>
+					<?php endif; ?>
+					<?php if(post_custom('shop-menu-price')): ?>
 						<dt>価格</dt>
-						<dd><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円' ); } ?></dd>
+						<dd><?php echo SCF::get('shop-menu-price'); ?></dd>
+					<?php endif; ?>
 					</dl>
 				</div>
 			</div>
