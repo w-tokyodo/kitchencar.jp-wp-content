@@ -38,8 +38,10 @@ get_header(); ?>
 				</div>
 				<div class="entry-fields__menu">
 					<dl>
-						<td><?php if ( $shop_menu_item = SCF::get( 'shop-menu-item' ) ) {  echo esc_html( $shop_menu_item ); } ?></td>
-						<td><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円' ); } ?></td>
+						<dt>自慢の一品</dt>
+						<dd><?php if ( $shop_menu_item = SCF::get( 'shop-menu-item' ) ) {  echo esc_html( $shop_menu_item ); } ?></dd>
+						<dt>価格</dt>
+						<dd><?php if ( $shop_menu_price = SCF::get( 'shop-menu-price' ) ) {  echo esc_html( $shop_menu_price . '円' ); } ?></dd>
 					</dl>
 				</div>
 			</div>
