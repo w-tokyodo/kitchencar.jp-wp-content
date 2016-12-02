@@ -23,10 +23,18 @@ get_header(); ?>
 			<header class="entry-header">
 			</header>
 			<div class="kgc_shop">
-				<div class="kgc_shop__column kgc_shop__food">
-					<?php the_post_thumbnail('kgc-food'); ?>
+				<div class="kgc_shop__column kgc_shop__image">
+					<div class="kgc_shop__food">
+						<?php the_post_thumbnail('kgc-post-image'); ?>
+					</div>
+					<div class="kgc_shop__car">
+						<?php $image = get_post_meta($post->ID, 'shop-image', true); echo wp_get_attachment_image($image, 'kgc-post-image');?>
+					</div>
 				</div>
 				<div class="kgc_shop__column kgc_shop__info">
+					<div class="kgc_shop__cat">
+					<?php echo get_the_term_list($post->ID, 'kgc_shop_cat'); ?>
+					</div>
 					<h1 class="kgc_shop__title">
 						<?php the_title(); ?>
 					</h1>
@@ -43,6 +51,10 @@ get_header(); ?>
 							<dt>価格</dt>
 							<dd><?php echo SCF::get('shop-menu-price'); ?>円</dd>
 						<?php endif; ?>
+						<?php if(post_custom('shop-content')): ?>
+							<dt>コメント</dt>
+							<dd><?php echo SCF::get('shop-content'); ?></dd>
+						<?php endif; ?>
 						</dl>
 					</div>
 				</div>
@@ -54,7 +66,7 @@ get_header(); ?>
 </div>
 
 		<!-- <?php get_template_part("template-parts/content","contact"); ?> -->
-		<!-- <?php get_template_part("template-parts/content","sponsor"); ?> -->
+		<?php get_template_part("template-parts/content","sponsor"); ?>
 
 <?php
 get_footer();
