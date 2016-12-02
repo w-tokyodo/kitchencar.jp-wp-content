@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="content-header">
 	<div class="content-header__image">
-		<a href="<?php echo esc_url(home_url( '/' )); ?>">
+		<a href="http://kitchencar.jp/">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/single-header.png" >
 		</a>
 	</div>
