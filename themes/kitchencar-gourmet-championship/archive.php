@@ -29,7 +29,7 @@ get_header(); ?>
 		<ul class="archive-area__list">
 		<?php while(have_posts()): the_post(); ?>
 			<li class="archive-area__item">
-				<a class="news-item"> href="<?php the_permalink(); ?>">
+				<a class="news-item" href="<?php the_permalink(); ?>">
 					<div class="archive-area__date">
 						<?php the_time("Y.m.d" ); ?>
 					</div>
