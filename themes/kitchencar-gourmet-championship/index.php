@@ -19,7 +19,7 @@ get_header(); ?>
 					<source src="<?php echo get_stylesheet_directory_uri(); ?>/movie/kitchencar_gorumet_grandprix_2017.m4v" type="video/mp4">
 				</video>
 				<div class="main-visual__logo">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-visual.png" alt="">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-visual-2017.png" alt="キッチンカーグルメ選手権2017">
 				</div>
 			</div>
 		</div>
