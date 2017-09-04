@@ -13,7 +13,7 @@
 		<!-- <?php get_template_part('template-parts/content','special' ); ?> -->
 		<div class="frontCopyright">
 				<div class="frontCopyright__inner">
-						<p>Copyright (C) 2016 キッチンカースタジアムグルメ選手権. All Rights Reserved.</p>
+						<p>Copyright (C) 2017 キッチンカースタジアムグルメ選手権. All Rights Reserved.</p>
 				</div>
 		</div>
 		<?php wp_footer(); ?>
