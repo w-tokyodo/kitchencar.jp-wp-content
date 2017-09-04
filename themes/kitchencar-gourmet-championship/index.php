@@ -14,8 +14,8 @@
 
 get_header(); ?>
 		<div class="frontHeader">
-			<div class="main-visual">
-				<video autoplay loop poster="<?php echo get_stylesheet_directory_uri(); ?>/static/img/bg.jpg" id="bgvid">
+			<div class="wrapper">
+				<video autoplay loop poster="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/bg.jpg" id="video">
 					<source src="<?php echo get_stylesheet_directory_uri(); ?>/movie/kitchencar_gorumet_grandprix_2017.m4v" type="video/mp4">
 				</video>
 				<div class="main-visual__logo">
