@@ -1,12 +1,5 @@
 @charset 'utf-8';
 
-.stripe {
-	width: 100%;
-	height: 100%;
-	background: url(../img/stripe.png);
-	background-repeat: repeat;
-}
-
 .main-visual {
 	height: 900px;
 	text-align: center;
@@ -31,5 +24,44 @@
 		@include inner;
 		padding-top: 50px;
 		padding-bottom: 50px;
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%); /* Safari用 */
+		transform: translateY(-50%);
+		text-align: center;
+		img {
+			width: 80%;
+			height: auto;
+			@media screen and (max-width:480px) {
+				width: 120%;
+			}
+		}
 	}
+}
+
+
+.wrapper {
+	height: 100%; // 高さを画面いっぱいに指定する。(vhが効かない場合の対策)
+	height: 100vh; // 高さを画面いっぱいに指定する。
+	position: relative;  //横幅がウィンドウズサイズの縦幅よりもはみ出てしまう場合に、左にずらすために指定。
+	width: 100%; // 横幅もいっぱいに。
+	overflow: hidden;
+}
+
+#video {
+	background: url('../img/bg.jpg') no-repeat; // 動画が再生を始めるまで、cssのほうでも背景を設定します。
+	background-attachment: fixed; // 中央揃えになるように、fixed。
+	background-position: center center; // positionも中央に。
+	background-size: cover; // 画面サイズに応じてサイズを可変するように設定。
+	left: 0;
+	// 以下、画面いっぱいにするためのCSS設定
+	min-height: 100%;
+	min-height: 100vh;
+	min-width: 100%;
+	min-width: 100vw;
+	// wrapperのサイズに応じて、leftの位置をjQueryで指定するため、positionはabsoluteにします。
+	position: absolute;
+	top: 0;
+	// z-indexは調整してください。
+	z-index: -10;
 }
