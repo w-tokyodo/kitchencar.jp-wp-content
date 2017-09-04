@@ -103,6 +103,7 @@ add_action( 'widgets_init', 'kitchincar_gourmet_championship_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kitchincar_gourmet_championship_scripts() {
+	wp_enqueue_script( 'kitchincar-gourmet-championship-navigation', get_template_directory_uri() . '/js/video.js', array(), '20170904', true );
 
 	wp_enqueue_script( 'kitchincar-gourmet-championship-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
