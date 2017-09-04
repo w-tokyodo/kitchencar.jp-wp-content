@@ -14,9 +14,14 @@
 
 get_header(); ?>
 		<div class="frontHeader">
-				<div class="frontHeader__inner">
-						<div class="frontHeader__visual"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-visual.png" alt=""></div>
+			<div class="main-visual">
+				<video autoplay loop poster="<?php echo get_stylesheet_directory_uri(); ?>/static/img/bg.jpg" id="bgvid">
+					<source src="<?php echo get_stylesheet_directory_uri(); ?>/movie/kitchencar_gorumet_grandprix_2017.m4v" type="video/mp4">
+				</video>
+				<div class="main-visual__logo">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-visual.png" alt="">
 				</div>
+			</div>
 		</div>
 		<?php get_template_part("template-parts/content","news"); ?>
 		<?php get_template_part("template-parts/content","event"); ?>
