@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 .frontHeader {
-	background: url(../img/bg.jpg);
+	//background: url(../img/bg.jpg);
 	background-position: center top ;
 	background-repeat: repeat;
 	&__inner {
@@ -13,6 +13,7 @@
 		text-align: center;
 	}
 }
+
 
 .frontNews {
 	&__inner {
