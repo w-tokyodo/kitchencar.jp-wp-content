@@ -1,1 +1,35 @@
 @charset 'utf-8';
+
+.stripe {
+	width: 100%;
+	height: 100%;
+	background: url(../img/stripe.png);
+	background-repeat: repeat;
+}
+
+.main-visual {
+	height: 900px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	img {
+		z-index: 2;
+		position: absolute;
+		top: 100px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	video {
+			margin: 0 auto;
+			z-index: 1;
+			width: 100%;
+	}
+	&__logo {
+		@include inner;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
