@@ -21,8 +21,8 @@
 							<p>
 							レストランで腕を磨いた経験や、こだわり抜いた開発した独自メニューなど自慢の一品を提供している「キッチンカー」のジャンル別のNo.1を決定します！アジア最大級のサッカースタジアム「埼玉スタジアム2002」で、普段は味わえない味をお楽しみください。</p>
 						</div>
-						<div class="frontEvent__map"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/map.png" alt="">
+						<!--<div class="frontEvent__map"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/map.png" alt="">
 								<p>埼玉高速鉄道「浦和美園駅」から徒歩15分</p><small>※駐車台数に限りがありますので、公共交通機関にてご来場ください。なお、満車の際はご容赦ください。</small>
-						</div>
+						</div>-->
 				</div>
 		</div>
