@@ -23,6 +23,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
+		<?php get_template_part("template-parts/content","information"); ?>
 		<?php get_template_part("template-parts/content","news"); ?>
 		<?php get_template_part("template-parts/content","event"); ?>
 		<!--<?php get_template_part("template-parts/content","shop"); ?> -->
