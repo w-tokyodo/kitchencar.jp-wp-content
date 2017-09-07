@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="content-header">
 	<div class="content-header__image">
 		<a href="<?php echo esc_url(home_url( '/' )); ?>">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/single-header.png" >
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-logo.png" >
 		</a>
 	</div>
 </div>
