@@ -198,3 +198,4 @@ add_image_size( 'kgc_thumbnail', 231, 117, true );
 add_image_size( 'kgc_thumbnail_post', 400, 400, true );
 add_image_size( 'kgc_thumbnail_car', 100, 100, true );
 add_image_size( 'kgc-post-image', 400, 150, true );
+add_image_size( 'kgc_news_thumbnail', 200, 200, array( 'center', 'center' ) );

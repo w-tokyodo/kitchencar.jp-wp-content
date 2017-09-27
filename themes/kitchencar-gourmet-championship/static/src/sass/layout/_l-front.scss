@@ -49,12 +49,16 @@
 				padding-left: 0;
 				padding-bottom: 0;
 			}
+			img {
+				width:100px;
+				height:auto;
+			}
 		}
 		&__title {
 			display: block;
 			text-decoration: underline;
 			font-size: $fs-m;
-			padding-left: 140px;
+			padding-left: 130px;
 			@media screen and (max-width:800px) {
 				padding: 0;
 				margin-bottom: 10px;
