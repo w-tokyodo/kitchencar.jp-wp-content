@@ -23,6 +23,6 @@
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 						</ul>
-						<a href="<?php echo esc_url(home_url('/2016')); ?>" class="btn">もっと見る</a>
+						<a href="<?php echo esc_url(home_url('/2017')); ?>" class="btn">もっと見る</a>
 				</div>
 		</div>
