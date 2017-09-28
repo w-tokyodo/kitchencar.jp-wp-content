@@ -206,3 +206,24 @@
 		margin-top: 3px;
 	}
 }
+
+.frontRun {
+	background: #FBF2D8;
+	&__inner {
+		@include inner;
+		@extend .cf;
+	}
+	&__copy {
+		width:80%;
+		float: left;
+		box-sizing: border-box;
+		padding: 10px;
+		img {
+
+		}
+	}
+	&__icon {
+		width:20%;
+		float: left;
+	}
+}
