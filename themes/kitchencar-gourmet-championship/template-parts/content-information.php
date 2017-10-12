@@ -1,7 +1,7 @@
         <div class="frontNews" style="background-color:#333;color:#fff;text-align:center;">
             <div class="frontNews__inner col-3" style="padding-bottom:30px;">
                 <div class="col-3__item" style="height:100px;text-align:left;font-size:.9em;">
-                    申し込み多数につき、ランニングイベント参加募集を10/20（金）まで延長いたします。たくさんのお申し込みをお待ちいたしております。
+                    ランニングイベント参加募集を10/20（金）まで延長いたします。たくさんのお申し込みをお待ちしております。
                 </div>
                 <div class="col-3__item" style="height:100px;">
                     <a href="https://www.sportsentry.ne.jp/event/t/72251" target="_blank" style="
