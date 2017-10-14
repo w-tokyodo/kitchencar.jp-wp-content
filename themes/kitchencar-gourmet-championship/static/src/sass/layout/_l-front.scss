@@ -227,3 +227,21 @@
 		float: left;
 	}
 }
+body {
+  position: relative;
+	z-index: 10;
+}
+
+.global_menu {
+	position: absolute;
+	z-index: 15;
+  top:2em;
+  left: 2em;
+	img {
+
+	}
+}
+
+#menu {
+	z-index: -10;
+}
