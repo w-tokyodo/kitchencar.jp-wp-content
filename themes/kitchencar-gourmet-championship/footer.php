@@ -10,13 +10,25 @@
  */
 
 ?>
-		<!-- <?php get_template_part('template-parts/content','special' ); ?> -->
-		<div class="frontCopyright">
-				<div class="frontCopyright__inner">
-						<p>Copyright (C) 2017 キッチンカースタジアムグルメ選手権. All Rights Reserved.</p>
-				</div>
+	<!-- <?php get_template_part( 'template-parts/content', 'special' ); ?> -->
+	<div class="frontCopyright">
+		<div class="frontCopyright__inner">
+			<p>Copyright (C) 2017 キッチンカースタジアムグルメ選手権. All Rights Reserved.</p>
 		</div>
-		<?php wp_footer(); ?>
-		</body>
+	</div>
+</div>
+<div id="menu">
+	<ul class="menu__list">
+		<?php
+		$only_li_menu = array(
+			'container' => '',//<div>を出力しない
+			'items_wrap' => '%3$s',//<ul>を出力しない
+		);
+		wp_nav_menu($only_li_menu);
+		?>
+	</ul>
 
-		</html>
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>
