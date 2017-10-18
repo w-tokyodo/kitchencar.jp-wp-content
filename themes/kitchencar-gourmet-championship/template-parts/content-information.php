@@ -18,20 +18,5 @@
                         border-width: 0;
                     " class="btn">ランニングイベントお申込み</a>
                 </div>
-                <div class="col-3__item" style="height:100px;">
-                    <a href="https://do.l-tike.com/app/dss/race/detail?acd=1l3RSD-yDRx" target="_blank" style="
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        text-align: center;
-                        font-weight: 700;
-                        background-color: #076cb9;
-                        color: #fff;
-                        line-height:80px;
-                        margin: 0;
-                        padding: 0;
-                        border-width: 0;
-                    " class="btn">ローソンチケット会員の方</a>
-                </div>
             </div>
         </div>
