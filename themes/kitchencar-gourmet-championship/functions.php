@@ -202,3 +202,4 @@ add_image_size( 'kgc-post-image', 400, 150, true );
 add_image_size( 'kgc_news_thumbnail', 200, 200, array( 'center', 'center' ) );
 
 require_once locate_template('functions/navigation.php');
+require_once locate_template('functions/frontnews.php');
