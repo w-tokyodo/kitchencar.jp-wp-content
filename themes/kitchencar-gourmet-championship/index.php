@@ -22,6 +22,9 @@ get_header(); ?>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-logo.png" alt="キッチンカーグルメ選手権2017">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-desc.png" alt="キッチンカーグルメ選手権2017">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-date.png" alt="キッチンカーグルメ選手権2017">
+					<div class="frontnews_box">
+						<?php echo esc_html(get_option('frontnews'));?>
+					</div>
 				</div>
 			</div>
 		</div>
