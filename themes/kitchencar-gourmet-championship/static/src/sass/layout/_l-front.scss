@@ -233,10 +233,10 @@ body {
 }
 
 .global_menu {
-	position: absolute;
+	position: fixed;
 	z-index: 15;
-  top:2em;
-  left: 2em;
+	top:2em;
+	left: 2em;
 	img {
 
 	}
