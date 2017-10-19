@@ -22,9 +22,13 @@ get_header(); ?>
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-logo.png" alt="キッチンカーグルメ選手権2017">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-desc.png" alt="キッチンカーグルメ選手権2017">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/main-date.png" alt="キッチンカーグルメ選手権2017">
+					<?php
+					$frontnews = get_option('frontnews');
+					if($frontnews):?>
 					<div class="frontnews_box">
-						<?php echo esc_html(get_option('frontnews'));?>
+						<?php echo esc_html($frontnews);?>
 					</div>
+					<?php endif;?>
 				</div>
 			</div>
 		</div>
