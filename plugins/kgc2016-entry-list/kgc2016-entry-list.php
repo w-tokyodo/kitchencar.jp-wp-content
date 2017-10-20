@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Kitchencar Gourmet Championship - Entry List
+ * Plugin Name: Kitchencar Gourmet Championship 2016 - Entry List
  */
 
 add_action( 'plugins_loaded', 'init_kgc2016_entry_list' );

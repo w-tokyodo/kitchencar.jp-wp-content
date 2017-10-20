@@ -20,7 +20,7 @@ add_action( 'init', function() {
 	);
 	register_taxonomy(
 		'kgc_number',
-		[ 'kgc_entry' ],
+		[ 'kgc_entry', 'kgc_shop' ],
 		[
 			'label' => '開催年',
 			'hierarchical' => false
