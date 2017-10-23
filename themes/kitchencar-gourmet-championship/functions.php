@@ -163,7 +163,7 @@ function register_shop_custom_post() {
             'rewrite' => true,
             'query_var' => true,
             'has_archive' => true,
-            'supports' => array('title','thumbnail','editor','custom-fields'),
+            'supports' => array('title','thumbnail','editor','excerpt','custom-fields'),
             'taxonomies' => array('release_cat'),
             'labels' => array(
                 'name' => '出店情報',
