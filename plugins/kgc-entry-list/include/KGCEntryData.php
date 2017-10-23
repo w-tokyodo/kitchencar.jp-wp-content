@@ -13,7 +13,8 @@ class KGCEntryData {
 
     public static function get( $submit_time ) {
         $self = self::getInstance();
-        return $self::$list[$submit_time] ?? [];
+        $data = isset( $self::$list[$submit_time] ) ? $self::$list[$submit_time] : [];
+        return $data;
     }
 
     private static function getInstance() {
