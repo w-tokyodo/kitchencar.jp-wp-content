@@ -9,7 +9,7 @@ add_filter( 'KGCShop_image_size', function( $size ) {
 	return 'kgc_thumbnail';
 } );
 
-?><div class="container" style="font-size: .75em;">
+?><div class="container-fluid" style="font-size: .75em;">
 <table class="table">
 	<thead>
 		<tr>
