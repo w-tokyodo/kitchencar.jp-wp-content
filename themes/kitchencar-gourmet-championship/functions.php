@@ -267,5 +267,12 @@ add_action( 'pre_get_posts', function( $q ) {
 			),
 		);
 		$q->set( 'tax_query', $args );
+		return;
+	}
+	if ( $q->is_main_query() && $q->is_tax( 'kgc_area' ) ) {
+		$q->set( 'orderby', 'meta_value_num' );
+		$q->set( 'meta_key', 'kgc_entry_number_2017' );
+		$q->set( 'order', 'ASC' );
+		return;
 	}
 } );
