@@ -7,6 +7,11 @@
  * @package KitchinCar_Gourmet_Championship
  */
 
+$context = 'shop';
+if ( isset( $_REQUEST['view'] ) && $_REQUEST['view'] === 'list' ) {
+	$context = 'table';
+}
+
 get_header(); ?>
 
 <div class="content-header">
@@ -17,8 +22,7 @@ get_header(); ?>
 	</div>
 </div>
 
-
-<?php get_template_part('template-parts/loop','shop' ); ?>
-
 <?php
+get_template_part('template-parts/loop', $context );
+
 get_footer();
