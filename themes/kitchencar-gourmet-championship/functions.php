@@ -232,3 +232,27 @@ add_image_size( 'kgc_news_thumbnail', 200, 200, array( 'center', 'center' ) );
 
 require_once locate_template('functions/navigation.php');
 require_once locate_template('functions/frontnews.php');
+
+/** 以下、2017年用 @author Toshimichi Mimoto <mimosafa@gmail.com> */
+
+/**
+ * エントリー台数をGET する関数
+ *
+ * @param string|integer $year
+ * @return integer
+ */
+function kgc_get_entries_num( $year ) {
+	if ( $year == '2016') {
+		$numposts = $wpdb->get_var(
+			"SELECT count(*) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'kgc_shop'"
+		);
+		if (0 < $numposts) {
+			$numposts = number_format($numposts);
+		}
+		return $numposts;
+	}
+	if ( $year == '2017' ) {
+		return 40;
+	}
+	return 0;
+}

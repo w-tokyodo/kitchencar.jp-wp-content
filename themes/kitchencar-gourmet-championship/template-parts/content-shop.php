@@ -3,9 +3,7 @@
 				<div class="frontShop__headline"><img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt=""></div>
 				<div class="frontShop__info">
 					全国から
-					<span class="frontShop__info__number">
-					<?php $numposts = $wpdb->get_var("SELECT count(*) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'kgc_shop'"); if (0 < $numposts) $numposts = number_format($numposts); echo  $numposts ;?>
-					</span>
+					<span class="frontShop__info__number"><?= esc_html( kgc_get_entries_num( 2017 ) ) ?></span>
 					店舗が集結!!
 				</div>
 
