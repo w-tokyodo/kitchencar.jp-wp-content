@@ -26,14 +26,26 @@ class KGCShop {
     }
 
     private function get_food_image() {
-        return get_the_post_thumbnail( $this->post->ID, 'medium' );
+        $size = apply_filters( 'KGCShop_image_size', 'medium', 'food' );
+        $image = get_the_post_thumbnail( $this->post->ID, $size );
+        if ( ! $image ) {
+            $src = get_stylesheet_directory_uri() . '/static/assets/img/thumbnail.jpg';
+            $image = '<img src="' . $src . '" />';
+        }
+        return $image;
     }
 
     private function get_car_image() {
-        return wp_get_attachment_image(
+        $size = apply_filters( 'KGCShop_image_size', 'medium', 'car' );
+        $image = wp_get_attachment_image(
             get_post_meta( $this->post->ID, 'shop-image', true ),
-            'medium'
+            $size
         );
+        if ( ! $image ) {
+            $src = get_stylesheet_directory_uri() . '/static/assets/img/thumbnail.jpg';
+            $image = '<img src="' . $src . '" />';
+        }
+        return $image;
     }
 
     private function get_copy() {
