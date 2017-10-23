@@ -33,7 +33,7 @@ while( have_posts() ):
 			<td><?= $shop->name ?></td>
 			<td><?= $shop->genre ?></td>
 			<td><?= $shop->main_menu_item ?> <small><?= $shop->main_menu_price ?> 円</small></td>
-			<td><?php if ( $shop->has_min_menu ) { ?><?= $shop->main_menu_item ?> <small><?= $shop->main_menu_price ?> 円</small><?php } ?></td>
+			<td><?php if ( $shop->has_min_menu() ) { ?><?= $shop->min_menu_item ?> <small><?= $shop->min_menu_price ?> 円</small><?php } ?></td>
 			<td><strong><?= $shop->copy ?></strong><br><?= $shop->description ?></td>
 		</tr><?php
 endwhile;
