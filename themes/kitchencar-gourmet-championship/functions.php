@@ -211,6 +211,17 @@ function register_shop_custom_post() {
             'singular_label' => '出店エリア'
         )
     );
+	/**
+	 * 開催年。プラグインから移動。なんとなく…
+	 */
+	register_taxonomy(
+		'kgc_number',
+		array( 'kgc_entry', 'kgc_shop' ),
+		array(
+			'label' => '開催年',
+			'hierarchical' => false
+		)
+	);
 }
 
 add_image_size( 'kgc_thumbnail', 231, 117, true );

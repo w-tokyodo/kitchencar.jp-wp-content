@@ -18,12 +18,4 @@ add_action( 'init', function() {
 			'supports' => [ 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ]
 		]
 	);
-	register_taxonomy(
-		'kgc_number',
-		[ 'kgc_entry', 'kgc_shop' ],
-		[
-			'label' => '開催年',
-			'hierarchical' => false
-		]
-	);
 } );
