@@ -56,10 +56,24 @@ class KGCShop {
     }
 
     private function get_category() {
-        if ( ! $category = get_the_term_list($this->post->ID, 'kgc_area') ) {
+        if ( ! $category = $this->_get_the_area() ) {
             $category = get_the_term_list($this->post->ID, 'kgc_shop_cat');
         }
         return $category;
+    }
+
+    private function _get_the_area() {
+        $area = get_the_terms( $this->post, 'kgc_area' );
+        if ( ! $area || is_wp_error( $area ) ) {
+            return '';
+        }
+        $area = $area[0];
+        $html = '<a href="' . esc_url( get_term_link( $area, 'kgc_area' ) ) . '" ';
+        if ( $color = get_term_meta( $area->term_id, 'color', true ) ) {
+            $html .= 'style="background-color:' . $color . ';" ';
+        }
+        $html .= 'rel="tag">' . $area->name . '</a>';
+        return $html;
     }
 
     private function get_main_menu_item() {
