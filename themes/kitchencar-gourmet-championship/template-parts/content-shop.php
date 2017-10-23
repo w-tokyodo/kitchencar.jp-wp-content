@@ -9,7 +9,23 @@
 
 				<div class="frontShop__inner col-3">
 
-				<?php $loop = new WP_Query( array('post_type' => 'kgc_shop', 'posts_per_page' => 6 ,'orderby' => 'rand' ) ); while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php
+				$loop = new WP_Query(
+					array(
+						'post_type' => 'kgc_shop',
+						'posts_per_page' => 6,
+						'orderby' => 'rand',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'kgc_number',
+								'field'    => 'slug',
+								'terms'    => '2017',
+							),
+						),
+					)
+				);
+
+				while ( $loop->have_posts() ) : $loop->the_post();
 
 						<div class="col-3__item frontShop__item">
 								<a href="<?php the_permalink(); ?>">

@@ -256,3 +256,16 @@ function kgc_get_entries_num( $year ) {
 	}
 	return 0;
 }
+
+add_action( 'pre_get_posts', function( $q ) {
+	if ( $q->is_main_query() && $q->is_post_type_archive( 'kgc_shop' ) ) {
+		$args = array(
+			array(
+				'taxonomy' => 'kgc_number',
+				'field'    => 'slug',
+				'terms'    => '2017',
+			),
+		);
+		$q->set( 'tax_query', $args );
+	}
+} );
