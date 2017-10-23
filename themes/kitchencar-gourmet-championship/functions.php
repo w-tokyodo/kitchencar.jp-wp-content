@@ -267,6 +267,7 @@ add_action( 'pre_get_posts', function( $q ) {
 			),
 		);
 		$q->set( 'tax_query', $args );
+		$q->set( 'orderby', 'rand' );
 		return;
 	}
 	if ( $q->is_main_query() && $q->is_tax( 'kgc_area' ) ) {
