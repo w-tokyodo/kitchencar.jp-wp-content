@@ -25,6 +25,10 @@ class KGCShop {
         return get_the_title( $this->post );
     }
 
+    private function get_number() {
+        return (int) get_post_meta( $this->post->ID, 'kgc_entry_number_2017', true );
+    }
+
     private function get_food_image() {
         $size = apply_filters( 'KGCShop_image_size', 'medium', 'food' );
         $image = get_the_post_thumbnail( $this->post->ID, $size );
@@ -112,6 +116,10 @@ class KGCShop {
             $desc = SCF::get('shop-content') ?: '';
         }
         return $desc;
+    }
+
+    private function get_genre() {
+        return get_post_meta( $this->post->ID, 'kgc_genre', true );
     }
 
 }
