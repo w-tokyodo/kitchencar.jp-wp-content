@@ -267,6 +267,12 @@ add_action( 'pre_get_posts', function( $q ) {
 			),
 		);
 		$q->set( 'tax_query', $args );
+		if ( isset( $_REQUEST['view'] ) && $_REQUEST['view'] === 'list' ) {
+			$q->set( 'orderby', 'meta_value_num' );
+			$q->set( 'meta_key', 'kgc_entry_number_2017' );
+			$q->set( 'order', 'ASC' );
+			return;
+		}
 		$q->set( 'orderby', 'rand' );
 		return;
 	}
