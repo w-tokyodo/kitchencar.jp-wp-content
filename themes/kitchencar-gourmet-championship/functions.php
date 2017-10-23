@@ -7,6 +7,8 @@
  * @package KitchinCar_Gourmet_Championship
  */
 
+define( 'KGC_THEME_DIR', __DIR__ );
+
 if ( ! function_exists( 'kitchincar_gourmet_championship_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -191,6 +193,22 @@ function register_shop_custom_post() {
             'query_var' => true,
             'rewrite' => true,
             'singular_label' => '出店カテゴリー'
+        )
+    );
+
+	/**
+	 * For 'area category' in 2017
+	 */
+    register_taxonomy(
+        'kgc_area',
+        'kgc_shop',
+        array(
+            'hierarchical' => false,
+            'label' => '出店エリア',
+            'show_ui' => true,
+            'query_var' => true,
+            'rewrite' => true,
+            'singular_label' => '出店エリア'
         )
     );
 }
