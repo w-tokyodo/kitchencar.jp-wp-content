@@ -1,4 +1,25 @@
-<div class="archive-area">
+<?php
+
+/**
+ * Import KGCShop class
+ */
+require_once KGC_THEME_DIR . '/inc/class-kgc-shop.php';
+
+add_filter( 'KGCShop_image_size', function( $size, $context ) {
+	switch ( $context ) {
+		case 'food' :
+			$size = 'kgc_thumbnail';
+			break;
+		case 'car' :
+			$size = 'kgc_thumbnail_car';
+			break;
+		default :
+			break;
+	}
+	return $size;
+}, 10, 2 );
+
+?><div class="archive-area">
 	<div class="archive-area__headline">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt="">
 	</div>
@@ -11,40 +32,30 @@
 		<div class="archive-area__cat"><?php if ($terms = get_the_terms($post->ID, 'kgc_shop_cat')) { foreach ( $terms as $term ) { echo esc_html($term->name) ; }}?></div>
 	<?php endif ;?>
 	<div class="frontShop__inner col-3">
-	<?php while(have_posts()): the_post(); ?>
+	<?php while(have_posts()): the_post();
+		$shop = new KGCShop( $post ); ?>
 		<div class="col-3__item frontShop__item">
 				<a href="<?php the_permalink(); ?>">
 					<div class="col-3__img frontShop__thumb">
-						<?php if ( has_post_thumbnail()): ?>
-							<?php the_post_thumbnail('kgc_thumbnail'); ?>
-						<?php else: ?>
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/thumbnail.jpg" alt="<?php the_title(); ?>">
-						<?php endif; ?>
+						<?= $shop->food_image ?>
 						<div class="frontShop__car">
-							<?php $image = get_post_meta($post->ID, 'shop-image', true); echo wp_get_attachment_image($image, 'kgc_thumbnail_car');?>
+							<?= $shop->car_image ?>
 						</div>
 					</div>
 				</a>
-				<div class="col-3__title frontShop__cat"><?php echo get_the_term_list($post->ID, 'kgc_shop_cat'); ?></div>
+				<div class="col-3__title frontShop__cat"><?= $shop->category ?></div>
 				<a href="<?php the_permalink(); ?>">
 					<div class="col-3__title frontShop__title">
-						<?php
-						if(mb_strlen($post->post_title, 'UTF-8')>14){
-							$title= mb_substr($post->post_title, 0, 14, 'UTF-8');
-							echo $title.'…';
-						}else{
-							echo $post->post_title;
-						}
-						?>
+						<?= esc_html( $shop->name ) ?>
 					</div>
-					<div class="col-3__title frontShop__copy"><?php echo SCF::get('shop-copy'); ?></div>
+					<div class="col-3__title frontShop__copy"><?= esc_html( $shop->copy ) ?></div>
 				</a>
 		</div>
 	<?php endwhile; ?>
 	</div>
-	<ul class="cat-list"><?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'kgc_shop_cat','hide_empty' => 0)); ?>
+	<?php /* <ul class="cat-list"><?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'kgc_shop_cat','hide_empty' => 0)); ?>
 		<li class="cat-item"><a href="<?php echo esc_url(home_url( '/kgc_shop' )); ?>">全ジャンル</a></li>
-	</ul>
+	</ul> */ ?>
 	<div class="nav-link">
 		<div class="nav-link__left"><?php previous_posts_link( '&laquo; 前の店舗一覧' ); ?></div>
 		<div class="nav-link__right"><?php next_posts_link( '次の店舗一覧&raquo;', '' ); ?></div>
