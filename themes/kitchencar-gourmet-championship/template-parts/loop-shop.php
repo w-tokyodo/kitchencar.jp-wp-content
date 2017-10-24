@@ -19,25 +19,14 @@ add_filter( 'KGCShop_image_size', function( $size, $context ) {
 	return $size;
 }, 10, 2 );
 
-$term = get_queried_object();
-$desc = $term->description
-	? '<p style="margin-top:-30px;">' . $term->description . '</p>'
-	: ''
-;
-
 ?><div class="archive-area">
 	<div class="archive-area__headline">
-		<header style="text-align:center;">
-			<h1 style="
-				display: inline-block;
-				padding-right: 1em;
-				padding-left: 1em;
-				font-family: Georgia,serif;
-			"><?= esc_html( $term->name ) ?></h1>
-		</header>
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt="">
 	</div>
 	<div class="frontShop__info">
-		<?= $desc ?>
+		全国から
+		<span class="frontShop__info__number"><?= esc_html( kgc_get_entries_num( 2017 ) ) ?></span>
+		店舗が集結!!
 	</div>
 	<?php if (is_tax('kgc_shop_cat')): ?>
 		<div class="archive-area__cat"><?php if ($terms = get_the_terms($post->ID, 'kgc_shop_cat')) { foreach ( $terms as $term ) { echo esc_html($term->name) ; }}?></div>
