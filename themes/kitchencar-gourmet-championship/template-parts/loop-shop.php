@@ -19,14 +19,25 @@ add_filter( 'KGCShop_image_size', function( $size, $context ) {
 	return $size;
 }, 10, 2 );
 
+$headline = '<img src="' . get_stylesheet_directory_uri() . '/static/assets/img/title_shop.png" alt="">';
+$desc = '全国から <span class="frontShop__info__number">' . esc_html( kgc_get_entries_num( 2017 ) ) . '</span> 店舗が集結!!';
+if ( is_tax( 'kgc_area' ) ) {
+	$term = get_queried_object();
+	$area = esc_html( $term->name );
+	$headline = <<<HEADLINE
+<header style="text-align:center">
+			<h1 style="font-family:serif;">$area</h1>
+		</header>
+HEADLINE;
+	$desc = esc_html( $term->description );
+}
+
 ?><div class="archive-area">
 	<div class="archive-area__headline">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/static/assets/img/title_shop.png" alt="">
+		<?= $headline ?>
 	</div>
 	<div class="frontShop__info">
-		全国から
-		<span class="frontShop__info__number"><?= esc_html( kgc_get_entries_num( 2017 ) ) ?></span>
-		店舗が集結!!
+		<?= $desc ?>
 	</div>
 	<?php if (is_tax('kgc_shop_cat')): ?>
 		<div class="archive-area__cat"><?php if ($terms = get_the_terms($post->ID, 'kgc_shop_cat')) { foreach ( $terms as $term ) { echo esc_html($term->name) ; }}?></div>
