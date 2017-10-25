@@ -30,8 +30,6 @@ get_header(); ?>
 		 */
 		$shop = new KGCShop( $post ); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="entry-header">
-			</header>
 			<div class="kgc_shop">
 				<div class="kgc_shop__column kgc_shop__image">
 					<div class="kgc_shop__food">
@@ -70,7 +68,6 @@ get_header(); ?>
 						</dl>
 					</div>
 				</div>
-			</div>
 			</div>
 		</article>
 	<?php endwhile; ?>
