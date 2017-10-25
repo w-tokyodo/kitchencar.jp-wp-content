@@ -53,9 +53,7 @@ get_header(); ?>
 	<div class="frontShop__inner col-3">
 	<?php while(have_posts()): the_post();
 		$shop = new KGCShop( $post ); ?>
-		<div class="col-3__item frontShop__item" style="
-			height: 210px;
-		">
+		<div class="col-3__item frontShop__item">
 				<a href="<?php the_permalink(); ?>">
 					<div class="col-3__img frontShop__thumb">
 						<?= $shop->food_image ?>
