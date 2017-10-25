@@ -27,7 +27,7 @@ add_filter( 'KGCShop_image_size', function( $size, $context ) {
 }, 10, 2 );
 
 $term = get_queried_object();
-$map = SCF::get_term_meta( get_queried_object(), 'kgc_area', 'kgc2017_area_map' );
+$map = SCF::get_term_meta( $term, 'kgc_area', 'kgc2017_area_map' );
 
 get_header(); ?>
 
