@@ -60,20 +60,21 @@ get_header(); ?>
 						<div class="frontShop__car">
 							<?= $shop->car_image ?>
 						</div>
-						<div style="
-							font-size: .9em;
-							padding: .25em;
-							color: #333;
+						<span style="
 							display: inline-block;
-							border: solid 1px #333;
-							border-radius: 2em;
+							text-align: center;
+							width: 25px;
+							height: 25px;
 							position: absolute;
 							top: 4px;
 							left: 4px;
+							font-size: .9em;
+							color: #333;
+							border: solid 1px #333;
+							border-radius: 25px;
 							background-color: #fff;
-							height: 1em;
-							line-height: 1em;
-						"><?= esc_html( $shop->number ) ?></div>
+							line-height: 25px;
+						"><?= esc_html( $shop->number ) ?></span>
 					</div>
 				</a>
 				<a href="<?php the_permalink(); ?>">
